@@ -63,11 +63,19 @@ public class janela extends JFrame {
 		lblResultado.setText(resultado+"");
 	}
 	
+	public void variaveis() {
+		nota1 = Integer.parseInt(lblNota1.getText());
+		nota2 = Integer.parseInt(lblNota2.getText());
+		nota3 = Integer.parseInt(lblNota3.getText());
+		nota4 = Integer.parseInt(lblNota4.getText());
+	}
+	
 
 	/**
 	 * Create the frame.
 	 */
 	public janela() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 622, 254);
 		contentPane = new JPanel();
@@ -85,7 +93,7 @@ public class janela extends JFrame {
 		contentPane.add(lblResultado);
 		
 		JButton btnCalcular = new JButton("Calcular");
-		btnCalcular.setBounds(223, 122, 149, 47);
+		btnCalcular.setBounds(500, 113, 98, 93);
 		btnCalcular.addActionListener(a -> clique());
 		contentPane.add(btnCalcular);
 		
@@ -108,11 +116,25 @@ public class janela extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(416, 34, 56, 16);
 		contentPane.add(lblNewLabel);
-	}
-	public void variaveis() {
-		nota1 = Integer.parseInt(lblNota1.getText());
-		nota2 = Integer.parseInt(lblNota2.getText());
-		nota3 = Integer.parseInt(lblNota3.getText());
-		nota4 = Integer.parseInt(lblNota4.getText());
+		
+		JLabel lblNewLabel_1 = new JLabel("Nota 1");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(22, 73, 79, 32);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNota_2 = new JLabel("Nota 2");
+		lblNota_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNota_2.setBounds(123, 73, 79, 32);
+		contentPane.add(lblNota_2);
+		
+		JLabel lblNota_1 = new JLabel("Nota 3");
+		lblNota_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNota_1.setBounds(214, 73, 79, 32);
+		contentPane.add(lblNota_1);
+		
+		JLabel lblNota = new JLabel("Nota 4");
+		lblNota.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNota.setBounds(315, 73, 79, 32);
+		contentPane.add(lblNota);
 	}
 }
